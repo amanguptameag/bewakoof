@@ -1,1 +1,80 @@
+############################################
+# 1st Question
+# stroing in 2d list: [[3, 'mango'], [2, 'apple'], [1, 'orange']]
+
+def add_to_list(array, string):
+	#check if string is already present in the list
+	for k in range(len(array)):
+		if array[k][1] == string:
+			# if already present then simply increase the string count
+			array[k][0] += 1
+			return
+
+	# if string is not present in list
+	array.append([1, string])
+
+
+def kth_most_repeated(array, k):
+	# sort the list in decending order wrt count
+	array.sort(reverse=True)
+	return array[k-1][1]
+
+
+array = []
+
+add_to_list(array, 'apple')
+add_to_list(array, 'apple')
+add_to_list(array, 'orange')
+
+print(kth_most_repeated(array, 2))
+
+add_to_list(array, 'mango')
+add_to_list(array, 'mango')
+add_to_list(array, 'mango')
+
+print(kth_most_repeated(array, 3))
+print(kth_most_repeated(array, 1))
+
+#######################################################
+
+# 2nd Question
+
+Category Table
+id       name      created_at
+1        shoe       18-11-2020
+2        phone      18-11-2020
+
+Product Table
+id         name        description       category_id        price       created_at
+1          Redmi        blue-4gb          2                 10000       18-11-2020
+2          nike         white             1                 2000        19-11-2020
+
+Today's Deal Table
+id       product_id        price      start_time             end_time               created_at
+1          1                8000      20-11-2020 8:30       20-11-2020 12:30        20-11-2020
+2          2                1500      20-11-2020 8:30       20-11-2020 12:30        20-11-2020
+
+
+########################################################
+
+
+# 3rd Question
+
+metaprogramming: In Simple language, The Program than manipulate program.
+
+Ex. like Compiler, Interpreters has sets of program that manipulate or run some other program.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
